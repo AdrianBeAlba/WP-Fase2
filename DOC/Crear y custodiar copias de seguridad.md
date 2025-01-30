@@ -105,7 +105,7 @@ Dentro del archivo de crontab realizamos las siguientes configuraciones:
 
 ~~~bash
 # Backup de archivos - Lunes y Jueves a las 23:00
-0 23 * * 1,4 /home/wp-admin/backup_wordpress_files.sh
+0 23 * * 1,4 /home/wp-admin/backup-wordpress-files.sh
 
 # Backup de la base de datos - Lunes y Jueves a las 23:30
 30 23 * * 1,4 /home/wp-admin/backup_wordpress_db.sh
