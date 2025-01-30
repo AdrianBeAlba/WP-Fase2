@@ -115,3 +115,41 @@ Dentro del archivo de crontab realizamos las siguientes configuraciones:
 ~~~
 
 Con esto ya tenemos una estructura básica de copias de seguridad a partir de scripts.
+
+# Copias de seguridad a partir de plugins
+
+## Herramientas necesarias
+* Wordpress instalado
+
+### Paso 1 Instalación del plugin
+
+Para este ejercicio vamos a trabajar con All-in-One WP Migration and Backup, debido a su popularidad y 0 coste.
+
+1. Nos dirigimos a Wordpress > Plugins > Añadir Plugins
+2. En el buscador introducimos ***All-in-One WP Migration and Backup***
+
+![alt text](../IMG/01-CP.png)
+
+3. Pulsamos ***Instalar Ahora***
+
+4. Pulsamos **Activar**
+
+Deberá de aparecer así cuando de termine de instalar:
+
+![alt text](../IMG/02-CP.png)
+
+### Paso 2 Uso de la herramienta
+
+1. Nos dirigimos a Wordpress > All-in-One WP Migration and Backup
+2. Nos aparecerá esta pantalla:
+
+![alt text](../IMG/03_CP.png)
+
+Abrimos el desplegable y elegimos el método de exportación (en mi caso archivo):
+
+![alt text](../IMG/04-CP.png)
+
+3. Comenzara el proceso de extracción y después podrás descargar el archivo:
+
+![alt text](../IMG/05-CP.png)
+![alt text](../IMG/06-Cp.png)
