@@ -8,16 +8,16 @@ Lo primero es comprobar que hay actualizaciones.
 
 Si el sistema está actualizado, aparecerá esto:
 
-![img1](/WP-Fase2/IMG/ca1.png)
+![img1](/IMG/ca1.png)
 
 
 En caso de no estar actualizado, se mostrará algo como esto:
 
-![img2](/WP-Fase2/IMG/ca2.png)
+![img2](/IMG/ca2.png)
 
 Si es una actualización menor (cambios pequeños), el mensaje indicará la versión disponible. Si es una actualización grande, aparecerá algo similar a esto:
 
-![img3](/WP-Fase2/IMG/ca3.png)
+![img3](/IMG/ca3.png)
 
 
 También puedes descargar la última versión de la actualización de WordPress desde el hPanel:
@@ -33,7 +33,7 @@ También puedes descargar la última versión de la actualización de WordPress 
 2. Accede a la carpeta extraída y elimina el archivo `wp-config-sample.php` y la carpeta `wp-content` para no perder datos importantes.
 3. Accede a tu sitio de WordPress a través de **FileZilla** o tu cliente FTP preferido.
 4. En el lado derecho del panel (sitio remoto), busca los directorios `wp-includes` y `wp-admin`, haz clic derecho y selecciona **Borrar** para eliminarlos.
-![img4](/WP-Fase2/IMG/ca4.png)
+![img4](/IMG/ca4.png)
 
 
 Luego, subimos dos carpetas importantes:
@@ -41,7 +41,7 @@ Luego, subimos dos carpetas importantes:
 - `wp-includes`
 - `wp-admin`
 
-![img5](/WP-Fase2/IMG/ca5.png)
+![img5](/IMG/ca5.png)
 
 
 Después:
@@ -82,21 +82,21 @@ Este método se realiza a través de **SSH**, por lo que debes tener acceso al s
    wp theme update --all
    wp plugin update --all
    ```
-   ![img6](/WP-Fase2/IMG/ca6.png)
+   ![img6](/WP-Fase/IMG/ca6.png)
 
 6. Una vez completada la actualización, deberías ver un mensaje de éxito.
 
 ## Actualización de plugins y temas
 
 1. Ve a **Escritorio** y haz clic en **Actualizaciones**.
-![img7](/WP-Fase2/IMG/ca7.png)
+![img7](/IMG/ca7.png)
 
 2. Si hay actualizaciones disponibles, aparecerán listadas.
-![img8](/WP-Fase2/IMG/ca8.png)
+![img8](/IMG/ca8.png)
 
 3. Si no hay actualizaciones, no se mostrará nada.
 
-![img9](/WP-Fase2/IMG/ca9.png)
+![img9](/IMG/ca9.png)
 
 
 Hasta aquí todo. ¡Recuerda mantener tu WordPress actualizado para evitar problemas de seguridad y mejorar el rendimiento! 🚀
