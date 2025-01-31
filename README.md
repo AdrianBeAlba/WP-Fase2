@@ -7,3 +7,5 @@
 ### **3. [Importar contenido](DOC/Importacion-Contenido.md)**
 
 ### **4. [Gestionar Usuarios](<DOC/Gestionar Usarios.md>)**
+
+### **5. [Securizar con SSL](<DOC/securizar.md>)**
