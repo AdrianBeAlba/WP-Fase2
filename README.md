@@ -1,4 +1,4 @@
-# WP-Fase2
+# Administración y gestión de un CMS
 
 ### **1. [Actualizaciones](<DOC/actualizaciones wordpress.md>)**
 
