@@ -41,7 +41,7 @@ Si prefieres una solución sin tocar código, instala uno de estos plugins:
 
 - **WP Activity Log** 📝 (Monitorea accesos y actividades de los usuarios)
 
-![img10](/WP-Fase2/IMG/activity.png)
+![img10](/IMG/activity.png)
 
 - **Simple History** 📜 (Guarda un historial de accesos y acciones en WordPress)
 - **User Activity Log** 🔍 (Genera reportes detallados de la actividad de usuarios)
