@@ -43,33 +43,35 @@ echo "Backup de archivos completado: $BACKUP_FILE"
 
 #### Script Para copia de la Base de datos
 
+***Nota: necesitamos tener instalado el cliente de mariadb***
 ~~~bash
 #!/bin/bash
 
 # Configuración
 BACKUP_DIR="/home/wp-admin/wordpress_backups"
-DB_CONTAINER="wordpress-db"
+MYSQL_HOST=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' wordpress-db)  # Si estás en Docker, intenta con "localhost" o "wordpress-db"
+MYSQL_PORT="3306"
 MYSQL_USER="wordpress_user"
 MYSQL_PASSWORD="password123"
 MYSQL_DATABASE="wordpress"
 TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
-BACKUP_FILE="$BACKUP_DIR/wordpress_db_$TIMESTAMP.zip"
+BACKUP_FILE="$BACKUP_DIR/wordpress_db_$TIMESTAMP.sql"
 
 # Crear directorio de backup si no existe
 mkdir -p "$BACKUP_DIR"
 
-# Dump de la base de datos desde el contenedor MariaDB
+# Hacer el dump de la base de datos desde el host en lugar del contenedor
 echo "Creando backup de la base de datos..."
-docker exec "$DB_CONTAINER" mysqldump -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE" > "$BACKUP_DIR/db_backup.sql"
+mysqldump -h "$MYSQL_HOST" -P "$MYSQL_PORT" -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE" > "$BACKUP_FILE"
 
-# Comprimir la base de datos en un ZIP
+# Comprimir el archivo SQL
 echo "Comprimiendo backup de la base de datos..."
-zip -r "$BACKUP_FILE" "$BACKUP_DIR/db_backup.sql"
+zip -r "$BACKUP_FILE.zip" "$BACKUP_FILE"
 
-# Eliminar archivo SQL temporal
-rm "$BACKUP_DIR/db_backup.sql"
+# Eliminar el archivo SQL original después de comprimirlo
+rm "$BACKUP_FILE"
 
-echo "Backup de la base de datos completado: $BACKUP_FILE"
+echo "Backup de la base de datos completado: $BACKUP_FILE.zip"
 ~~~
 
 #### (Opcional) Script para borrado de copias antiguas
